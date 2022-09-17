@@ -1,0 +1,68 @@
+@use '../util/' as *;
+
+.goal {
+    &__card {
+        @include flex-column-center;
+        padding: 8px;
+        position: relative;
+        width: 130px;
+        height: 136px;
+        border-radius: 5px;
+        background: $goal-card-background-color;
+        box-shadow: $goal-card-shadow;
+
+        &.position-bottom::after,
+        &.position-top::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 6px;
+            width: 14px;
+            background-color: $goal-card-background-color;
+            box-shadow: $goal-card-arrow-shadow;
+        }
+
+        &.position-bottom {
+            margin-top: 6px;
+
+            &::after {
+                bottom: 100%;
+                clip-path: polygon(50% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        &--final {
+            height: 194px;
+            background: $goal-card-final-background-color;
+            transform: translateX(calc(-50% + 16px));
+
+            &.position-bottom::after {
+                background-color: $goal-card-final-background-color;
+                left: calc(100% - 16px);
+            }
+        }
+
+        &.position-top {
+            margin-bottom: 6px;
+
+            &::after {
+                top: 100%;
+                clip-path: polygon(0 0, 100% 0, 50% 100%);
+            }
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .title {
+            @include flex-row-center;
+            flex: 1;
+            width: 100px;
+            margin-top: 8px;
+            text-align: center;
+        }
+    }
+}

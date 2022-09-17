@@ -1,0 +1,62 @@
+.goal__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  position: relative;
+  width: 130px;
+  height: 136px;
+  border-radius: 5px;
+  background: #173f4b;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+}
+.goal__card.position-bottom::after, .goal__card.position-top::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 14px;
+  background-color: #173f4b;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.4);
+}
+.goal__card.position-bottom {
+  margin-top: 6px;
+}
+.goal__card.position-bottom::after {
+  bottom: 100%;
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%);
+          clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+.goal__card--final {
+  height: 194px;
+  background: #3c7f90;
+  transform: translateX(calc(-50% + 16px));
+}
+.goal__card--final.position-bottom::after {
+  background-color: #3c7f90;
+  left: calc(100% - 16px);
+}
+.goal__card.position-top {
+  margin-bottom: 6px;
+}
+.goal__card.position-top::after {
+  top: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+.goal__card img {
+  display: block;
+  margin: 0 auto;
+}
+.goal__card .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100px;
+  margin-top: 8px;
+  text-align: center;
+}/*# sourceMappingURL=goal-card.css.map */

@@ -1,0 +1,33 @@
+.timeline__bubble {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  margin: 6px 0;
+}
+.timeline__bubble--default {
+  height: 8px;
+  width: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 8px;
+  background: #00b897;
+}
+.timeline__bubble--initial {
+  height: 100%;
+  width: 18px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 5px solid #00b897;
+  border-radius: 18px;
+  background: transparent;
+}
+.timeline__bubble--invisible {
+  height: 100%;
+  width: 0;
+  background: transparent;
+}
+.timeline__bubble--final {
+  margin-left: -6px;
+}/*# sourceMappingURL=timeline-bubble.css.map */

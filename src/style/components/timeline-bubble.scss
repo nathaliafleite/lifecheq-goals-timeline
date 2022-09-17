@@ -1,0 +1,36 @@
+@use '../util/' as *;
+
+.timeline__bubble {
+    @include flex-row-center;
+    height: 18px;
+    margin: 6px 0;
+
+    &--default {
+        height: 8px;
+        width: 8px;
+        margin-left: 4px;
+        margin-right: 4px;
+        border-radius: 8px;
+        background: $timeline-step-color;
+    }
+
+    &--initial {
+        height: 100%;
+        width: 18px;
+        margin-left: 4px;
+        margin-right: 4px;
+        border: 5px solid $timeline-step-color;
+        border-radius: 18px;
+        background: transparent;
+    }
+
+    &--invisible {
+        height: 100%;
+        width: 0;
+        background: transparent;
+    }
+
+    &--final {
+        margin-left: -6px;
+    }
+}

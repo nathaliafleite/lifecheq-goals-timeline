@@ -1,0 +1,45 @@
+@use '../util/' as *;
+
+.goal {
+    &__description {
+        @include flex-column-center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        &.position-top {
+            bottom: 100%;
+
+            .goal__line {
+                margin-top: 8px;
+            }
+        }
+
+        &.position-bottom {
+            top: 100%;
+            padding-top: 2px;
+
+            .goal__line {
+                margin: 8px 0;
+            }
+        }
+    }
+
+    &__line {
+        height: 16px;
+        width: 2px;
+        border-radius: 2px;
+        background-color: $goal-line-color;
+    }
+
+    &__time {
+        @include flex-column-center;
+        width: 96px;
+        height: 36px;
+        opacity: 0.6;
+
+        &--initial {
+            width: 71px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.goal__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.goal__description.position-top {
+  bottom: 100%;
+}
+.goal__description.position-top .goal__line {
+  margin-top: 8px;
+}
+.goal__description.position-bottom {
+  top: 100%;
+  padding-top: 2px;
+}
+.goal__description.position-bottom .goal__line {
+  margin: 8px 0;
+}
+.goal__line {
+  height: 16px;
+  width: 2px;
+  border-radius: 2px;
+  background-color: #3c7f90;
+}
+.goal__time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 36px;
+  opacity: 0.6;
+}
+.goal__time--initial {
+  width: 71px;
+}/*# sourceMappingURL=goal-description.css.map */

@@ -1,0 +1,23 @@
+@use './style/util/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $white-color;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: $page-background-color;
+}
