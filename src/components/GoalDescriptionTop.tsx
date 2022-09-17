@@ -1,4 +1,4 @@
-import { stepsDictionary, StepType } from '../data/steps';
+import { StepType } from '../data/steps';
 import GoalCard from './GoalCard';
 
 type Props = {
